@@ -68,7 +68,7 @@ a {
 .hero {
   position: relative;
   width: 100%;
-  height: 70vh; /* Ajusta la altura del hero según prefieras */
+  height: 70vh; /* Altura ajustable */
   overflow: hidden;
   background:
     linear-gradient(to right, rgba(10,15,23,0.9) 0%, rgba(10,15,23,0.7) 50%, rgba(10,15,23,0.8) 100%),
@@ -76,10 +76,10 @@ a {
   background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Alineación a la izquierda */
+  justify-content: flex-start; /* Alinea a la izquierda */
 }
 
-/* Sombreado extra para suavizar la transición de Hero a la siguiente sección */
+/* Sombreado extra para suavizar la transición */
 .hero::after {
   content: "";
   position: absolute;
@@ -304,4 +304,45 @@ a {
 }
 .footer-social a:hover {
   color: #8bc34a;
+}
+
+/* =============================
+   MEDIA QUERIES (RESPONSIVE)
+============================= */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .menu ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .hero {
+    height: 60vh;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-content-box {
+    margin-left: 0;
+    padding: 2rem;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .btn,
+  .btn-discord {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  .info-discord, .faq-section {
+    width: 95%;
+    padding: 1rem;
+  }
+  .footer {
+    padding: 1.5rem 1rem;
+  }
 }
